@@ -92,8 +92,9 @@ extra:
       link: https://github.com/swisskyrepo
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/swisskyrepo
-  analytics:
-    provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
+  # Analytics disabled in personal fork - no need to track local study sessions
+  # analytics:
+  #   provider: google
+  #   property: !ENV GOOGLE_ANALYTICS_KEY
 
 copyright: Copyright &copy; 2024 swisskyrepo
