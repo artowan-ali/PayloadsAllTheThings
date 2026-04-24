@@ -1,72 +1,99 @@
-site_name: Payloads All The Things
-site_description: 'Payloads All The Things, a list of useful payloads and bypasses for Web Application Security'
-site_url: https://swisskyrepo.github.io/PayloadsAllTheThings
-
-repo_url: https://github.com/swisskyrepo/PayloadsAllTheThings/
+site_name: PayloadsAllTheThings
+site_description: A list of useful payloads and bypasses for Web Application Security
+site_author: swisskyrepo
+site_url: https://swisskyrepo.github.io/PayloadsAllTheThings/
+repo_url: https://github.com/swisskyrepo/PayloadsAllTheThings
+repo_name: PayloadsAllTheThings
 edit_uri: edit/master/
-
-# copyright: © 2016 PATT
-# logo: 'images/site_logo.png'
-# favicon: 'images/favicon.png'
 
 theme:
   name: material
-  custom_dir: overrides
-  color_mode: auto
-  user_color_mode_toggle: true
-  icon:
-    repo: fontawesome/brands/github
+  custom_dir: .github/overrides
+  logo: assets/logo.png
+  favicon: assets/logo.png
   palette:
-    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-
-    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-
   features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotate
     - content.code.copy
     - content.action.edit
-    - content.action.view
-    - content.tooltips
-    - navigation.tracking
-    - navigation.top
-    - search.share
-    - search.suggest
-    # - toc.integrate
-    # - navigation.path
 
-extra_css:
-  - custom.css
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
 
 markdown_extensions:
-  - tables
-  - attr_list
+  - abbr
   - admonition
+  - attr_list
   - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
   - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.snippets
-  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: swisskyrepo
+      repo: PayloadsAllTheThings
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  # - mdx_truly_sane_lists:
-  #     nested_indent: 2
-  #     truly_sane: True
- 
-plugins:
-  - search
-  - git-revision-date-localized
-  - social
+  - pymdownx.tilde
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/swisskyrepo
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/swisskyrepo
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+
+copyright: Copyright &copy; 2024 swisskyrepo
