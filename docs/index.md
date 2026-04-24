@@ -6,6 +6,8 @@ A list of useful payloads and bypasses for Web Application Security and Pentest/
 
 This repository is a collection of payloads and methodologies for web application security testing, bug bounty hunting, and CTF challenges.
 
+> **Personal Note:** I forked this for studying web security vulnerabilities. Most useful sections for me: SQL Injection, SSRF, and XSS Injection.
+
 ## Categories
 
 - [API Key Leaks](api-key-leaks/README.md)
